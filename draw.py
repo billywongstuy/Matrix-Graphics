@@ -1,22 +1,18 @@
 from display import *
 from matrix import *
 
-#go through 2 points at a time and call draw_line to add that line to screen
 def draw_lines( matrix, screen, color ):
     for i in range(0,len(matrix),2):
-        if i != len(matrix-1):
+        if i != len(matrix)-1:
             draw_line(matrix[i][0],matrix[i][1],matrix[i+1][0],matrix[i+1][1],screen,color)
 
-#add the line connecting the two points to matrix
-#should use add point
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    add_point(x0,y0,z0)
-    add_point(x1,y1,z1)
+    add_point(matrix,x0,y0,z0)
+    add_point(matrix,x1,y1,z1)
 
-#adds (x,y,z) to matrix
 def add_point( matrix, x, y, z=0 ):
     r = 0
-    while matrix[r][3] != 0 and r < len(matrix):
+    while r < len(matrix) and matrix[r][3] != 0:
         r+=1
     if r == len(matrix):
         matrix.append([x,y,z,1.0])

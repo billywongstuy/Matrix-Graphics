@@ -24,7 +24,6 @@ def scalar_mult( matrix, s ):
         for x in range(len(matrix[y])):
             matrix[y][x] *= s
 
-#m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
     new_matrix = []
     for row in range(len(m1)):
@@ -41,28 +40,6 @@ def matrix_mult( m1, m2 ):
         new_matrix.append(matrix_row)
     return new_matrix
             
-
-'''
-2 x 4
-
-A B C D
-E F G H
-
-
-4 x 3
-
-a b c 
-d e f
-g h i
-j k l
-
-
-Result 2x3
-
-Aa+Bd+Cg+Dj  Ab+Be+Fh+Dk Ac+Bf+Ci+Dl
-x   x   x
-'''
-
 
 def new_matrix(rows = 4, cols = 4):
     m = []
