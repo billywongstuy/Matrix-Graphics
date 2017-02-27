@@ -18,12 +18,12 @@ def ident( matrix ):
                 matrix[y][x] = 1
             else:
                 matrix[y][x] = 0
+                
 
 def scalar_mult( matrix, s ):
     for y in range(len(matrix)):
         for x in range(len(matrix[y])):
             matrix[y][x] *= s
-    return matrix
 
 #m1 is m * n
 #m2 is n * o
