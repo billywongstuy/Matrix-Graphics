@@ -20,3 +20,25 @@ add_edge(matrix,0,250,0,500,250,0)
 
 draw_lines( matrix, screen, color )
 display(screen)
+
+
+print "--------------------\nMatrix Multiplication:"
+m1 = [[1,8,3,4],[2,9,6,5]]
+m2 = [[1,2,3],[4,5,66],[7,8,9],[10,-3,0]]
+print_matrix(m1)
+print
+print_matrix(m2)
+print "\nMultiplying the above two should result in \n[94 54 558]\n[130 82 654]"
+m1xm2 = matrix_mult(m1,m2)
+print "\nResult:"
+print_matrix( m1xm2 )
+
+print "-------------------------\nScalar Multiplication:"
+print_matrix(m1)
+m1Scale = scalar_mult(m1,10)
+print "\nMultiplying the above matrix by 10 should result in\n[10,80,30,40]\n[20,90,60,50]"
+print "\nResult:"
+print_matrix(m1Scale)
+
+
+# need matrix examples (multiplication, etc.)
