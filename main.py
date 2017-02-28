@@ -5,6 +5,8 @@ screen = new_screen()
 color = [ 0, 255, 0 ]
 matrix = new_matrix()
 
+
+
 add_edge(matrix,0,0,0,500,500,0)
 add_edge(matrix,0,500,0,500,0,0)
 
@@ -21,7 +23,7 @@ add_edge(matrix,0,250,0,500,250,0)
 draw_lines( matrix, screen, color )
 display(screen)
 
-print "These are all the edges"
+print "These are all the points in format x y z 1.0. Every 2 points is a edge"
 print_matrix(matrix)
 
 
@@ -32,9 +34,9 @@ print_matrix(m1)
 print
 print_matrix(m2)
 print "\nMultiplying the above two should result in \n[94 54 558]\n[130 82 654]"
-m1xm2 = matrix_mult(m1,m2)
+matrix_mult(m1,m2)
 print "\nResult:"
-print_matrix( m1xm2 )
+print_matrix( m2 )
 
 print "-------------------------\nScalar Multiplication:"
 print_matrix(m1)

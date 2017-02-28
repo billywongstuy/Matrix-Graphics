@@ -41,7 +41,7 @@ def matrix_mult( m1, m2 ):
             matrix_row.append(total)
             
         new_matrix.append(matrix_row)
-    return new_matrix
+    m2 = new_matrix
             
 
 def new_matrix(rows = 4, cols = 4):
