@@ -25,24 +25,20 @@ def scalar_mult( matrix, s ):
         for x in range(len(matrix[y])):
             matrix[y][x] *= s
 
+import copy
 #m1 is m * n
 #m2 is n * o
 def matrix_mult( m1, m2 ):
-    new_matrix = []
+    m2_copy = copy.deepcopy(m2)
+    del m2[:]
     for row in range(len(m1)):
         matrix_row = []
-        for col in range(len(m2[0])):
-            #row is the row to check in m1
-            #col is the col to check in m2
+        for col in range(len(m2_copy[0])):
             total = 0
-            #loop through the cols in m1 or rows in m2
-            for r in range(len(m2)):
-                total += m1[row][r]*m2[r][col]
+            for r in range(len(m2_copy)):
+                total += m1[row][r]*m2_copy[r][col]
             matrix_row.append(total)
-            
-        new_matrix.append(matrix_row)
-    m2 = new_matrix
-            
+        m2.append(matrix_row)
 
 def new_matrix(rows = 4, cols = 4):
     m = []
